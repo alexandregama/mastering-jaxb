@@ -42,6 +42,7 @@ public class Book {
 		return name;
 	}
 
+	//setters to enable JAX-B to write our object data
 }
 
 ```
@@ -64,3 +65,11 @@ com.mastering.jaxb.book.Book does not have a no-arg default constructor.
 		at com.mastering.jaxb.book.Book
 ```
 As the error said, we must to provide a no-arg default constructor
+
+**Problem 3**
+Book object without information
+```
+Book [id=null, code=null, name=null]
+```
+This happens because we must to create all setters that we would like to work with. By default, JAX-B will use **getters** and **setters** to serialize object informations.
+
