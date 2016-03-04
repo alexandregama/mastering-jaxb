@@ -1,5 +1,6 @@
 package com.mastering.jaxb.book;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -21,6 +22,8 @@ public class Book {
 		this.name = name;
 	}
 
+	//We must use the @XmlElement here because the JAX-B uses by default AccessorType.PUBLIC_MEMBER, that is, getter and setter
+	@XmlElement(name = "id", required = true) 
 	public Long getId() {
 		return id;
 	}
