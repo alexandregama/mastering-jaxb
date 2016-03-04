@@ -67,6 +67,7 @@ com.mastering.jaxb.book.Book does not have a no-arg default constructor.
 As the error said, we must to provide a no-arg default constructor
 
 **Problem 3**
+
 Book object without information
 ```
 Book [id=null, code=null, name=null]
